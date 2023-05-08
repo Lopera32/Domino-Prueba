@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domino.Infrastructure.Repositories
+namespace Domino.Core.Interfaces
 {
     public interface IUserRepository 
     {

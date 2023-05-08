@@ -2,8 +2,11 @@
 using Domino.Core.Entities;
 using Domino.Core.Interfaces;
 using Domino.Infrastructure.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 
@@ -11,23 +14,47 @@ namespace Domino.Infrastructure.Repositories
 {
     public class DominoPieceRepository : IDominoRepository
     {
-        private readonly DominoContext _context;
-        public DominoPieceRepository(DominoContext context)
+        private DominoContext _context;
+        public DominoPieceRepository( DominoContext context)
         {
+         
             _context = context;
         }
-        public async Task<IEnumerable<DominoFullGame>> GetDominoPieces()
+
+
+        public IEnumerable<DominoFullGame> GetDomino()
         {
-            var dominoPieces = await _context.dominoFullGames.ToListAsync();
+            var dominoPieces = _context.dominoFullGames.ToList();
 
             return dominoPieces;
         }
 
-   
-
-
-        public List<DominoDto> CalculateChain(List<DominoDto> dominoPiece)
+        public List<DominoDto> CreateDominoFullGame(List<DominoDto> dominoChain)
         {
+            var domino = CalculateGameChain(dominoChain);
+
+            var dominoJson = JsonSerializer.Serialize(domino);
+
+            if (dominoJson == null)
+            {
+                var dominoGame = new DominoFullGame { DominoGame = dominoJson, isValid = false, UserId = 1 };
+                _context.Add(dominoGame);
+                _context.SaveChanges();
+                return domino;
+            }
+            else
+            {
+                var dominoGame = new DominoFullGame { DominoGame = dominoJson, isValid = true, UserId = 1 };
+                _context.Add(dominoGame);
+                _context.SaveChanges();
+                return domino;
+            }
+
+
+        }
+        public List<DominoDto> CalculateGameChain(List<DominoDto> dominoPiece)
+        {
+            //CAMBIAR DESDE ACA
             var availableDominoPiece = new List<DominoDto>(dominoPiece);
 
             var chain = new List<DominoDto> { availableDominoPiece[0] };
@@ -86,7 +113,7 @@ namespace Domino.Infrastructure.Repositories
 
             return chain;
         }
-
+        //CAMBIAR HASTA ACA
 
 
     }

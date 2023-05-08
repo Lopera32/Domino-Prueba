@@ -8,8 +8,9 @@ namespace Domino.Infrastructure.Mappings
     {
         public AutoMapperProfile()
         {
-            CreateMap<DominoChain, DominoDto>();
-            CreateMap<DominoDto, DominoChain>();
+            CreateMap<DominoFullGameDto, DominoFullGame>();
+            CreateMap<DominoFullGame, DominoFullGameDto>();
+
         }
     }
 }

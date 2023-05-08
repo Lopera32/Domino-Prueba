@@ -20,37 +20,33 @@ namespace Domino.Api.Controllers
     [ApiController]
     public class TokenController : ControllerBase
     {
-        //private readonly IAuthRepository _authRepository;
-        //private readonly IMapper _mapper;
         private readonly IConfiguration _configuration;
-        private readonly DominoContext _ctx;
+        private readonly DominoContext _contexto;
 
      
-        public TokenController(IConfiguration configuration, DominoContext ctx)
+        public TokenController(IConfiguration configuration, DominoContext contexto)
         {
-            //_authRepository = authRepository;
-            //_mapper = mapper;
+          
             _configuration = configuration;
-            _ctx = ctx;
+            _contexto = contexto;
         }
         [HttpPost]
-        public IActionResult Authentication(User login)
+        public IActionResult Authentication(User user)
         {
-            //var validation =  IsValidUser(login);
-            if (IsValidUser(login))
+            if (IsValidUser(user))
             {
                 var token = GenerateToken();
                 return Ok(new { token });
             }
 
-            return NotFound("El usuario no es permitido");
+            return NotFound("El usuario no fue encontrado");
 
         }
 
         private bool IsValidUser(User login)
         {
            
-            var user =_ctx.Users.Where(x => x.Email == login.Email).FirstOrDefault();
+            var user =_contexto.Users.Where(x => x.Email == login.Email).FirstOrDefault();
 
             if(user != null)
             {
@@ -70,8 +66,8 @@ namespace Domino.Api.Controllers
 
             var claims = new[]
            {
-                new Claim(ClaimTypes.Name, "Laura"),
-                new Claim(ClaimTypes.Email, "laura@gmail.com"),
+                new Claim(ClaimTypes.Name, "Sebastian"),
+                new Claim(ClaimTypes.Email, "jsloperagdv@gmail.com"),
                 
             };
 

@@ -42,9 +42,6 @@ namespace DominoApi
             services.AddMvc(options =>
             {
                 options.Filters.Add<ValidationFilter>();
-            }).AddFluentValidation(options =>
-            {
-                options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
             });
 
             services.AddAuthentication(options =>

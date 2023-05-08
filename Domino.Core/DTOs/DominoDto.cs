@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Domino.Core.DTOs
 {
-    public class DominoDto : Entity
+    public class DominoDto
     {
         public int FirstValue { get; set; }
         public int SecondValue { get; set; }

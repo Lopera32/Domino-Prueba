@@ -9,7 +9,7 @@ namespace Domino.Core.Interfaces
 {
     public interface IDominoRepository
     {
-        Task<IEnumerable<DominoFullGame>> GetDominoPieces();
-        List<DominoDto> CalculateChain(List<DominoDto> dominoPiece);
+        IEnumerable<DominoFullGame> GetDomino();
+        List<DominoDto> CreateDominoFullGame(List<DominoDto> dominoChain);
     }
 }

@@ -29,14 +29,11 @@ namespace Domino.Infrastructure.Data
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=localhost; Database=Domino;Integrated Security =false; Initial Catalog = DominoDb; User ID= sa; Password = root");
+                optionsBuilder.UseSqlServer("Data Source = localhost; Integrated Security = false; Initial Catalog = DominoDb; User ID = sa; Password = Administrador2023");
                 //optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB; Database=Domino;Integrated Security =true");
 
             }
         }
-       
-
-
         public DominoContext(DbContextOptions<DominoContext> options) :base(options) { }
 
 
