@@ -9,16 +9,16 @@ namespace Domino.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private DominoContext _ctx;
+        private DominoContext _context;
 
-        public UserRepository(DominoContext ctx)
+        public UserRepository(DominoContext context)
         {
-            _ctx = ctx;
+            _context = context;
         }
 
         public async Task<User> GetLogin(User login)
         {
-            return await _ctx.Users.FirstOrDefaultAsync(x => x.Email== login.Email);
+            return await _context.Users.FirstOrDefaultAsync(x => x.Email== login.Email);
         }
     }
 }

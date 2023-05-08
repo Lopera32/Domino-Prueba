@@ -12,10 +12,10 @@ using System.Threading.Tasks;
 
 namespace Domino.Infrastructure.Repositories
 {
-    public class DominoPieceRepository : IDominoRepository
+    public class DominoFullGameRepository : IDominoRepository
     {
         private DominoContext _context;
-        public DominoPieceRepository( DominoContext context)
+        public DominoFullGameRepository( DominoContext context)
         {
          
             _context = context;

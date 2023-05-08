@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YLSo4Pq+vaN0+9AIBerP0vWpe+xcqVipq9WuCiO8/A/uwDJgRlodsJhLhgKT5PHi2fYKO86zi++P/Ptlvdoy4g==",
+  "dgSpecHash": "03a2oq2ZD73RwB0k/8ZBTT1gc36QXSm4XlJbZIgZ75uz6wcaGMHl3pdTutVcU2/Xl3/kmOPNCJBqCiCdyewmqw==",
   "success": true,
-  "projectFilePath": "C:\\LAURA SOFIA\\DominoPT\\Domino-Prueba\\DominoApi\\Domino.Api.csproj",
+  "projectFilePath": "C:\\LAURA SOFIA\\Domino-Prueba\\DominoApi\\Domino.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\1053872947\\.nuget\\packages\\automapper\\6.1.1\\automapper.6.1.1.nupkg.sha512",
     "C:\\Users\\1053872947\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\3.1.0\\automapper.extensions.microsoft.dependencyinjection.3.1.0.nupkg.sha512",

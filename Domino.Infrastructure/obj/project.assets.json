@@ -6436,11 +6436,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\LAURA SOFIA\\DominoPT\\Domino-Prueba\\Domino.Infrastructure\\Domino.Infrastructure.csproj",
+      "projectUniqueName": "C:\\LAURA SOFIA\\Domino-Prueba\\Domino.Infrastructure\\Domino.Infrastructure.csproj",
       "projectName": "Domino.Infrastructure",
-      "projectPath": "C:\\LAURA SOFIA\\DominoPT\\Domino-Prueba\\Domino.Infrastructure\\Domino.Infrastructure.csproj",
+      "projectPath": "C:\\LAURA SOFIA\\Domino-Prueba\\Domino.Infrastructure\\Domino.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\1053872947\\.nuget\\packages\\",
-      "outputPath": "C:\\LAURA SOFIA\\DominoPT\\Domino-Prueba\\Domino.Infrastructure\\obj\\",
+      "outputPath": "C:\\LAURA SOFIA\\Domino-Prueba\\Domino.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -6463,8 +6463,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\LAURA SOFIA\\DominoPT\\Domino-Prueba\\Domino.Core\\Domino.Core.csproj": {
-              "projectPath": "C:\\LAURA SOFIA\\DominoPT\\Domino-Prueba\\Domino.Core\\Domino.Core.csproj"
+            "C:\\LAURA SOFIA\\Domino-Prueba\\Domino.Core\\Domino.Core.csproj": {
+              "projectPath": "C:\\LAURA SOFIA\\Domino-Prueba\\Domino.Core\\Domino.Core.csproj"
             }
           }
         }

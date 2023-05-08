@@ -37,7 +37,7 @@ namespace DominoApi
             );
             //Dependenies
 
-            services.AddTransient<IDominoRepository, DominoPieceRepository>();
+            services.AddTransient<IDominoRepository, DominoFullGameRepository>();
 
             services.AddMvc(options =>
             {
